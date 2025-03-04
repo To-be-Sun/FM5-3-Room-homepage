@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-size:2em;
+}
+h3{
+    font-size: 1em;
+}
+p{
+    opacity:0.5;
+    font-size:0.7em;
+}
+.top-container{
+    display:flex;
+    width:100vw;
+}
+.slideshow-container{
+    background-image: url("images/desktop-image-hero-1.jpg");
+    background-size: cover;
+    width:55%;
+}
+header{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    padding:5%;
+    color:white;
+}
+header p{
+    cursor:pointer;
+}
+header img{
+    display:none;
+}
+.explanation{
+    width:45%;
+    padding:5%;
+    position:relative;
+}
+
+.btn-container{
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.btn-container button{
+    background-color:black;
+    color:white;
+    width:60px;
+    height: 60px;
+    cursor:pointer;
+}
+.bottom-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    width:100vw;
+}
+.second-image img{
+    width:100%;
+}
+
+.third-image img{
+    width:100%;
+}
+.about{
+    padding-top:2%;
+    padding-right:5%;
+    padding-left:5%;
+    padding-bottom:2%;
+}
+.hamburger-open{
+    transform:translate(20000px,0);
+    z-index:10;
+    position:fixed;
+    top:0;
+    right:0;
+    left:70%;
+    bottom:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    transition: all 0.2s;
+    background-color:rgba(116, 3, 254, 0.363);
+    color:white;
+}
+.hamburger-open img{
+    position:absolute;
+    top:40px;
+    right:20px;
+    z-index:20;
+}    
+
+@media(max-width:1020px){
+    .top-container{
+        display:flex;
+        flex-direction:column;
+    }
+    .slideshow-container{
+        width:100%;
+        height:400px;
+    }
+    header{
+        justify-content: space-between;
+    }
+    header p{
+        display:none;
+    }
+    header img{
+        display:block;
+    }
+    .explanation{
+        width:100%;
+    }
+    .btn-container{
+        position:absolute;
+        top:-60px;
+    }
+    .bottom-container{
+        display:flex;
+        flex-direction:column;
+    }
+    .second-image{
+        width:100%;
+    }
+    .third-image{
+        width:100%;
+    }
+    .about{
+        width:100%;
+    }
+}
